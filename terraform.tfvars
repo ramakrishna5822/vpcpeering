@@ -1,0 +1,16 @@
+cidr_block = "10.40.0.0/16"
+cidr_block_public = ["10.40.1.0/24","10.40.2.0/24","10.40.3.0/24"]
+vpc_name = "dev"
+ami = "ami-088d38b423bff245f"
+key_name = "naveen"
+instance_type = "t2.micro"
+private_ip = ["10.40.1.5","10.40.2.5","10.40.3.5"]
+azs = ["us-east-2a","us-east-2b","us-east-2c"]
+cidr_block_1= "10.50.0.0/16"
+cidr_block_publics = ["10.50.1.0/24","10.50.2.0/24","10.50.3.0/24"]
+vpc_names = "prod"
+ami1 = "ami-005fc0f236362e99f"
+key_name1 = "nav-kp"
+instance_type1 = "t2.micro"
+private_ips = ["10.50.1.5","10.50.2.5","10.50.3.5"]
+azs1 = ["us-east-1a","us-east-1b","us-east-1c"]
