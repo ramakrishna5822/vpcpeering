@@ -7,13 +7,13 @@ variable "instance_type" {}
 variable "key_name" {}
 variable "private_ip" {}
 variable "cidr_block_1" {}
-variable "vpc_names" {}
-variable "azs1" {}
-variable "cidr_block_publics" {}
-variable "ami1" {}
-variable "instance_type1" {}
-variable "key_name1" {}
-variable "private_ips" {}
+# variable "vpc_names" {}
+# variable "azs1" {}
+# variable "cidr_block_publics" {}
+# variable "ami1" {}
+# variable "instance_type1" {}
+# variable "key_name1" {}
+# variable "private_ips" {}
 # variable "" {}
 # variable "" {}
 # variable "" {}
