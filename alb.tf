@@ -1,10 +1,10 @@
 resource "aws_lb" "application" {
-    count = 1
+
     name = "naveen-application-loadbalncer"
     internal = false
     load_balancer_type = "application"
     security_groups = [aws_security_group.sg.id]  
-    subnets = element(aws_subnet.public.*.id,count.index)
+    subnets = [aws_subnet.public[0].id,aws_subnet.public[1].id]
     tags = {
         Name = "${var.vpc_name}-loadbalancer"
     }
@@ -29,12 +29,19 @@ resource "aws_lb_target_group" "ram" {
   
 }
 
+resource "aws_lb_target_group_attachment" "instances" {
+    target_group_arn = aws_lb_target_group.ram.arn
+    target_id = aws_instance.server[0].id
+    port = 80
+  
+}
+
 resource "aws_lb_listener" "http" {
 load_balancer_arn = aws_lb.application.arn
 port =80
 protocol = "HTTP"
 default_action {
-  type = "application"
+  type = "forward"
   target_group_arn = aws_lb_target_group.ram.arn
 }
   
