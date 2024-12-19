@@ -1,6 +1,14 @@
+resource "aws_ami" "amis" {
+    name = "naveen-ami"
+    image_location = aws_instance.server[0].id
+    virtualization_type = "hvm"
+    tags = {
+        Name = "naveen-ami"
+    }
+}
 resource "aws_launch_template" "stack" {
     name_prefix = var.name_prefix
-    image_id = var.image_id
+    image_id = aws_ami.amis.id
     instance_type = var.instance_type
     network_interfaces {
       associate_public_ip_address = true
