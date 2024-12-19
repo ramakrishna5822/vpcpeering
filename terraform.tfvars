@@ -7,6 +7,7 @@ instance_type     = "t2.micro"
 private_ip        = ["10.40.1.5", "10.40.2.5", "10.40.3.5"]
 azs               = ["us-east-2a", "us-east-2b", "us-east-2c"]
 cidr_block_1      = "10.50.0.0/16"
+name_prefix = "prod"
 # cidr_block_publics = ["10.50.1.0/24","10.50.2.0/24","10.50.3.0/24"]
 # vpc_names = "prod"
 # ami1 = "ami-005fc0f236362e99f"

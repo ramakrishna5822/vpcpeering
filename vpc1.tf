@@ -73,7 +73,7 @@ resource "aws_security_group" "sg" {
 }
 
 resource "aws_instance" "server" {
-  count                       = 1
+  count                       = 2
   ami                         = var.ami
   instance_type               = var.instance_type
   key_name                    = var.key_name

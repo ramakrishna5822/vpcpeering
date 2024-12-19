@@ -47,7 +47,7 @@ resource "aws_autoscaling_policy" "scaleout" {
     name = "scaleout"
     scaling_adjustment = 1
     adjustment_type = "ChangeCapacity"
-    autoscaling_group_name = aws_autoscaling_group.shankar
+    autoscaling_group_name = aws_autoscaling_group.shankar.name
 
   
 }
@@ -56,7 +56,7 @@ resource "aws_autoscaling_policy" "scalein" {
     name = "scalein"
     scaling_adjustment = -1
     adjustment_type = "ChangeCapacity"
-    autoscaling_group_name = aws_autoscaling_group.shankar
+    autoscaling_group_name = aws_autoscaling_group.shankar.name
 
   
 }

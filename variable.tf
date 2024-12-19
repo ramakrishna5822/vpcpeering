@@ -19,4 +19,4 @@ variable "cidr_block_1" {}
 # variable "" {}
 # variable "" {}
 variable "name_prefix" {}
-variable "image_id" { }
+# variable "image_id" { }
