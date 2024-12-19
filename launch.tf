@@ -32,6 +32,7 @@ resource "aws_autoscaling_group" "shankar" {
     max_size = 5
     desired_capacity = 2
     vpc_zone_identifier = var.azs
+    target_group_arns = [aws_lb_target_group.ram.arn]
      tag {
     key                 = "Name"
     value               = "naveen-asg"
