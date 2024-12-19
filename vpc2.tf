@@ -5,7 +5,7 @@
 #   tags = {
 #     Name = "${var.vpc_names}"
 #   }  
-  
+
 # }
 
 # resource "aws_internet_gateway" "igws" {
@@ -14,7 +14,7 @@
 #     tags = {
 #         "Name" = "${var.vpc_names}-igw"
 #     }
-  
+
 # }
 
 # resource "aws_subnet" "publics" {
@@ -27,7 +27,7 @@
 #     tags = {
 #         Name = "${var.vpc_names}-public${count.index+1}"
 #     }
-  
+
 # }
 # resource "aws_route_table" "rt1" {
 #     provider = aws.naveen
@@ -46,7 +46,7 @@
 #     count = 3
 # route_table_id = aws_route_table.rt1.id
 # subnet_id = element(aws_subnet.publics.*.id,count.index)
-  
+
 # }
 
 # resource "aws_route" "communication1" {
@@ -55,7 +55,7 @@
 #     destination_cidr_block = var.cidr_block
 #     vpc_peering_connection_id = aws_vpc_peering_connection.owner.id
 
-  
+
 # }
 
 # resource "aws_security_group" "sg1" {
@@ -65,7 +65,7 @@
 #     description = "allow all rules"
 #     tags = {
 #         Name = "${var.vpc_names}-sg"
-    
+
 #     }
 #     ingress {
 #         to_port = 0
